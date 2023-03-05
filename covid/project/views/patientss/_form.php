@@ -24,8 +24,7 @@ use kartik\select2\Select2;
 
          <div class="col-sm-3">
             <label>Дата рождения</label>
-            <?
-            echo DatePicker::widget([
+            <?= DatePicker::widget([
                 'name' => 'Patient[birthday]', 
                 'value' => $model->birthday ? date('d-M-Y', strtotime($model->birthday)) : '',
                 'options' => ['placeholder' => 'Выберите дату'],
@@ -80,8 +79,7 @@ use kartik\select2\Select2;
      <div class="row">
         <div class="col-sm-3">
             <label>Дигноз поставлен</label>
-            <?
-            echo DatePicker::widget([
+            <?= DatePicker::widget([
                 'name' => 'Patient[diagnosis_date]', 
                 'value' => $model->diagnosis_date ? date('d-M-Y', strtotime($model->diagnosis_date)) : '',
                 'options' => ['placeholder' => 'Выберите дату'],
@@ -95,8 +93,7 @@ use kartik\select2\Select2;
 
         <div class="col-sm-3">
             <label>Дата выздоровления</label>
-            <?
-            echo DatePicker::widget([
+            <?= DatePicker::widget([
                 'name' => 'Patient[recovery_date]', 
                 'value' => $model->recovery_date ? date('d-M-Y', strtotime($model->recovery_date)) : '',
                 'options' => ['placeholder' => 'Выберите дату'],
@@ -110,8 +107,7 @@ use kartik\select2\Select2;
 
         <div class="col-sm-3">
             <label>Дата анализа</label>
-            <?
-            echo DatePicker::widget([
+            <?= DatePicker::widget([
                 'name' => 'Patient[analysis_date]', 
                 'value' => $model->analysis_date ? date('d-M-Y', strtotime($model->analysis_date)) : '',
                 'options' => ['placeholder' => 'Выберите дату'],
@@ -126,8 +122,7 @@ use kartik\select2\Select2;
 
      <div class="row" style="margin-top: 20px;">
         <div class="col-sm-6">
-            <?php 
-            echo $form->field($model, 'source_id')->widget(Select2::classname(), [
+            <?= $form->field($model, 'source_id')->widget(Select2::classname(), [
                 'data' => ArrayHelper::map( $patients, "id", "name"),
                 'language' => 'ru',
                 'options' => ['placeholder' => 'Выберите пациента'],

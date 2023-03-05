@@ -63,5 +63,11 @@ class BaseController extends Controller
         ];
     }
 
- 
+    /**
+     * @return bool
+     */
+    protected function isAccessToken()
+    {
+        return !empty($this->request->get('access-token'));
+    }
 }

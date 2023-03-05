@@ -7,6 +7,7 @@ use Yii;
 use app\models\User;
 use app\models\Polyclinics;
 use webvimark\modules\UserManagement\models\search\UserSearch;
+use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 
 /**

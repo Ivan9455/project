@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "5217267e-3076-4dd9-874f-01053a090f53",
+		"name": "tets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13021162"
+	},
+	"item": [
+		{
+			"name": "search with filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access-token",
+							"value": "qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000?access-token=qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ&PatientSearch%5Bname%5D=Пациент&PatientSearch%5Bphone%5D=89995675156&PatientSearch%5Bpolyclinic_id%5D=2&PatientSearch%5Bstatus_id%5D=3&PatientSearch%5Btreatment_id%5D=2&PatientSearch%5Bform_disease_id%5D=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "access-token",
+							"value": "qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ"
+						},
+						{
+							"key": "PatientSearch%5Bname%5D",
+							"value": "Пациент"
+						},
+						{
+							"key": "PatientSearch%5Bphone%5D",
+							"value": "89995675156"
+						},
+						{
+							"key": "PatientSearch%5Bpolyclinic_id%5D",
+							"value": "2"
+						},
+						{
+							"key": "PatientSearch%5Bstatus_id%5D",
+							"value": "3"
+						},
+						{
+							"key": "PatientSearch%5Btreatment_id%5D",
+							"value": "2"
+						},
+						{
+							"key": "PatientSearch%5Bform_disease_id%5D",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Patient[name]",
+							"value": "Иванов Иван Иванович",
+							"type": "text"
+						},
+						{
+							"key": "Patient[form_disease_id]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "Patient[polyclinic_id]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "Patient[status_id]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "Patient[treatment_id]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/patientss/create?access-token=qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"patientss",
+						"create"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "qyftGvqeDsWenw2pVFzOlm_7u1OhdwpZ"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
